@@ -63,7 +63,9 @@ Cuerpo Documento
 <div class="wrapper">
 
   
-  <!-- =============================================== -->
+  <?php
+    include "modulos/cabezote.php"
+  ?>
 
 
   <!-- Left side column. contains the sidebar -->
@@ -73,13 +75,13 @@ Cuerpo Documento
 
   <!-- Content Wrapper. Contains page content -->
   
-  
+
 </div>
 <!-- ./wrapper -->
 
 
 
 
-<script src = "js/plantilla.js"></script>
+<script src = "vistas/js/plantilla.js"></script>
 </body>
 </html>
