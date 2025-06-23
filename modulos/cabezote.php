@@ -24,6 +24,29 @@
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
+        
+        <!--Perfil de usuario-->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="vistas\Img\usuarios\default\usuario.png" class="user-image" width="40px" height="40px">
+                        <span class="hiden-xs"> Usuario Administrador </span>
+                    </a>
+                      <!--DropDown-Toggle-->
+
+                    <ul class="dropdown-menu">
+                        <li class="user-body">
+                            <div class="pull-rigth">
+                                <a href="" class="btn btn-default btn-flat">Salir</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+
     </nav>
 
 </header>
