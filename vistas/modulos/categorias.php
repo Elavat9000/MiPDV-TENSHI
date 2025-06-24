@@ -3,11 +3,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Administrar Categorias
+        Administrar categorias
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Administrar Categorias</li>
+        <li class="active">Administrar categorias</li>
       </ol>
     </section>
 

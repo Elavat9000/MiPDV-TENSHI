@@ -9,6 +9,8 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+  <link rel="icon" href="vistas/img/plantilla/Logo.png">
+
 
 <!-- =====================================
                PLUGINS DE CSS 
@@ -58,13 +60,16 @@
 Cuerpo Documento
 ========================================-->
 
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page bg-body-secondary">
 <!-- Site wrapper -->
-<div class="wrapper">
 
 
-  <?php
 
+<?php
+
+if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
+
+  echo '<div class="wrapper">';
   /*=====================================
   CABEZOTE
   =======================================*/
@@ -75,7 +80,7 @@ Cuerpo Documento
   MENU
   =======================================*/
   
-   include "modulos/menu.php";
+    include "modulos/menu.php";
 
   /*=====================================
   CONTENIDO
@@ -91,7 +96,11 @@ Cuerpo Documento
        $_GET["ruta"] == "crear-ventas"||
        $_GET["ruta"] == "reportes"){
       include "modulos/".$_GET["ruta"].".php";
+    }else{
+      include "modulos/404.php";
     }
+  }else{
+    include "modulos/inicio.php";
   }
 
 
@@ -100,22 +109,15 @@ Cuerpo Documento
   =======================================*/
     include "modulos/footer.php";
 
-  ?>
+    echo'<div>';
+} else{
+  include 'modulos/login.php';
+}
 
-
-  <!-- Left side column. contains the sidebar -->
-  
-
-  <!-- =============================================== -->
-
-  <!-- Content Wrapper. Contains page content -->
-  
+?>
 
 </div>
 <!-- ./wrapper -->
-
-
-
 
 <script src = "vistas/js/plantilla.js"></script>
 </body>
