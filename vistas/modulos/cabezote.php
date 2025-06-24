@@ -4,7 +4,7 @@
     LOGOTIPO
     ==============================================-->
 
-    <a href="" class="logo">
+    <a href="inicio" class="logo">
         <!-- LOGO MINI-->
         <span class="logo-mini">
             <img src="vistas/img/plantilla/logo.png" class="img-responsive" style="padding: 5px; max-height: 50px;">

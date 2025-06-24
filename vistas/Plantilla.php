@@ -62,9 +62,44 @@ Cuerpo Documento
 <!-- Site wrapper -->
 <div class="wrapper">
 
-  
+
   <?php
-    include "modulos/cabezote.php"
+
+  /*=====================================
+  CABEZOTE
+  =======================================*/
+
+    include "modulos/cabezote.php";
+
+  /*=====================================
+  MENU
+  =======================================*/
+  
+   include "modulos/menu.php";
+
+  /*=====================================
+  CONTENIDO
+  =======================================*/
+
+  if(isset($_GET["ruta"])){
+    if($_GET["ruta"] == "inicio"||
+       $_GET["ruta"] == "usuarios"||
+       $_GET["ruta"] == "categorias"||
+       $_GET["ruta"] == "productos"||
+       $_GET["ruta"] == "clientes"||
+       $_GET["ruta"] == "ventas"||
+       $_GET["ruta"] == "crear-ventas"||
+       $_GET["ruta"] == "reportes"){
+      include "modulos/".$_GET["ruta"].".php";
+    }
+  }
+
+
+   /*=====================================
+  FOOTER
+  =======================================*/
+    include "modulos/footer.php";
+
   ?>
 
 
