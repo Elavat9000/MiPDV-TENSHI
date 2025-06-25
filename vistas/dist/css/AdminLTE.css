@@ -3383,125 +3383,142 @@ table.text-center th {
  * Page: Login & Register
  * ----------------------
  */
-.login-logo,
-.register-logo {
-  font-size: 35px;
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 300;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  background: #2FADC6;
-  border-bottom: 1px solid #a8d8e6;
-}
-.login-logo a,
-.register-logo a {
-  color: #444;
-}
-.login-logo img,
-.register-logo img {
-  max-width: 180px;
-  height: auto;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
-}
-
-.login-page,
-.register-page {
-  background: linear-gradient(to bottom, #bbe6ef, #ffffff);
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;  /* Centrado horizontal */
-  align-items: center;      /* Centrado vertical */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 100px;
-}
-
-.login-box,
-.register-box {
-  width: 360px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-.login-box:hover,
-.register-box:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 768px) {
-  .login-box,
-  .register-box {
-    width: 90%;
-    margin-top: 20px;
-  }
-}
-
-.login-box-body,
-.register-box-body {
-  padding: 30px;
-  color: #666;
-}
-.login-box-body .form-control-feedback,
-.register-box-body .form-control-feedback {
-  color: #777;
-}
-
-.login-box-msg,
-.register-box-msg {
-  margin: 0 0 20px 0;
-  text-align: center;
-  color: #555;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-/* Estilos mejorados para los campos de formulario */
-.form-control {
-  height: 45px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-shadow: none;
-  transition: all 0.3s;
-}
-.form-control:focus {
-  border-color: #bbe6ef;
-  box-shadow: 0 0 0 3px rgba(187, 230, 239, 0.3);
-}
-
-/* Estilo mejorado para botones */
-.btn-primary {
-  background-color: #4bb8e7;
-  border-color: #3aa8d8;
-  border-radius: 5px;
-  padding: 10px;
-  font-weight: 600;
-  transition: all 0.3s;
-  color: white;
-}
-.btn-primary:hover {
-  background-color: #3aa8d8;
-  transform: translateY(-2px);
-}
-
-.social-auth-links {
-  margin: 10px 0;
-}
-
-/* Estilo adicional para el enlace de olvidé contraseña */
-.text-center a {
-  color: #4bb8e7;
-  text-decoration: none;
-}
-.text-center a:hover {
-  text-decoration: underline;
-}
-
+/* ESTILOS GENERALES PARA PÁGINA DE LOGIN */
+ /* ESTILOS CSS COMPLETOS */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .login-page {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+    
+    #back {
+      position: fixed; /* Cambiado a fixed para cubrir toda la pantalla */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url(../../Img/plantilla/Diseñoo.png) no-repeat center center;
+      background-size: cover;
+      z-index: -2;
+    }
+    
+    .login-page::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(187, 230, 239, 0.3), rgba(255, 255, 255, 0.3));
+      z-index: -1;
+    }
+    
+    .login-box {
+      position: relative;
+      z-index: 1;
+      width: 360px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    
+    .login-box:hover {
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.25);
+    }
+    
+    .login-logo {
+      padding: 30px 0;
+      text-align: center;
+      background: rgba(187, 230, 239, 0.3);
+      border-bottom: 1px solid rgba(168, 216, 230, 0.5);
+    }
+    
+    .login-logo img {
+      max-width: 200px;
+      height: auto;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    
+    .login-box-body {
+      padding: 30px;
+    }
+    
+    .login-box-msg {
+      margin: 0 0 25px 0;
+      text-align: center;
+      color: #555;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-control {
+      height: 45px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-shadow: none;
+      transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+      border-color: #4bb8e7;
+      box-shadow: 0 0 0 3px rgba(75, 184, 231, 0.2);
+    }
+    
+    .btn-login {
+      background-color: #4bb8e7;
+      border: none;
+      border-radius: 5px;
+      padding: 12px;
+      font-weight: 600;
+      color: white;
+      width: 100%;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+    
+    .btn-login:hover {
+      background-color: #3aa8d8;
+      transform: translateY(-2px);
+    }
+    
+    .login-footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #777;
+    }
+    
+    .login-footer a {
+      color: #4bb8e7;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .login-box {
+        width: 90%;
+        max-width: 360px;
+      }
+      
+      .login-logo img {
+        max-width: 160px;
+      }
+    }
 
 /*
  * Page: 400 and 500 error pages
