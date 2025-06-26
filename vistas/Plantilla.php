@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,6 +100,7 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
        $_GET["ruta"] == "clientes"||
        $_GET["ruta"] == "ventas"||
        $_GET["ruta"] == "crear-ventas"||
+       $_GET["ruta"] == "salir"||
        $_GET["ruta"] == "reportes"){
       include "modulos/".$_GET["ruta"].".php";
     }else{

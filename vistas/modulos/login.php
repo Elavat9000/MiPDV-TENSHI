@@ -1,4 +1,4 @@
-<div class="login-page">
+<div class="login-page" style="padding: 100px">
     <div id="back"></div>
     
     <div class="login-box">
@@ -21,6 +21,11 @@
           </div>
           
           <button type="submit" class="btn-login">Ingresar</button>
+
+          <?php
+            $login = new ControladorUsuarios();
+            $login->ctrIngresoUsuario();;
+          ?>
         </form>
       </div>
     </div>
