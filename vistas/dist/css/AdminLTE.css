@@ -3515,7 +3515,7 @@ table.text-center th {
     }
     
     /* Media queries para responsividad */
-    @media (max-width: 768px) {
+    @media (max-width: 320px) {
       .login-page {
       padding: 15px;
       align-items: flex-start; /* Ajuste para móviles */

@@ -143,7 +143,7 @@
 
                 <span class ="input-group-addon"><i class="fa fa-lock"></i></span>
                   
-                  <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
+                  <input type="text" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
 
               </div>
 
@@ -169,7 +169,7 @@
               </div>
 
             </div>
-  <!-------------Entrada para seleccionar el FOTOS---------->
+  <!-------------Entrada para seleccionar el perfil---------->
             
             <div class="form-group">
 
@@ -198,14 +198,6 @@
           <button type="submit" class="btn btn-primary">Guardar usuario</button>
 
         </div>
-
-        <?php
-
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario->ctrCrearUsuario();
-
-        ?>
-
 
       </form>
 
