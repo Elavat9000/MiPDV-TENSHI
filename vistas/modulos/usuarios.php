@@ -162,7 +162,7 @@
                     <option value="">Seleccionar perfil</option>
                     <option value="Administrador">Administrador</option>
                     <option value="Especial">Especial</option>
-                    <option value="Vendedor"> Vendedor</option>
+                    <option value="Vendedor">Vendedor</option>
 
                   </select>
 
@@ -175,11 +175,11 @@
 
               <div class="panel">SUBIR FOTO</div>
               
-                <input type="file" id="nuevaFoto" name="nuevaFoto">
+                <input type="file" class="nuevaFoto" name="nuevaFoto">
 
-                <p class="help-block"> Peso máximo de la foto 200MB</p>
+                <p class="help-block"> Peso máximo de la foto 2MB</p>
 
-                <img src="vistas/img/usuarios/default/usuario.png" class="img-thumbnail" width="100px">
+                <img src="vistas/img/usuarios/default/usuario.png" class="img-thumbnail previsualizar" width="100px">
 
             </div>
 

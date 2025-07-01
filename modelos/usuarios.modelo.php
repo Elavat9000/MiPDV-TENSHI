@@ -18,7 +18,7 @@ Mostrar Usuarios
 
         return $stmt->fetch();
 
-       // $stmt -> close();
+       // $stmt -> close(); 
 
         //$stmt = null;
     
@@ -29,12 +29,13 @@ Registro Usuario
     static public function mdlIngresarUsuario($tabla,$datos){
 
     
-        $stmt = Conexion::conectar()->prepare( "INSERT INTO  $tabla(nombre, usuario, password, perfil) VALUES (:nombre, :usuario, :password, :perfil)") ;
+        $stmt = Conexion::conectar()->prepare( "INSERT INTO  $tabla(nombre, usuario, password, perfil, foto) VALUES (:nombre, :usuario, :password, :perfil, :foto)") ;
 
         $stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
         $stmt->bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
         $stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
         $stmt->bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
+        $stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
 
         if($stmt->execute()){
 
