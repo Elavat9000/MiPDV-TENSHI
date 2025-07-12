@@ -15,22 +15,31 @@ class ControladorUsuarios{
                 $item = "usuario";
                 $valor = $_POST["ingUsuario"];
                 $respuesta = ModeloUsuarios::mdlMostrarUsuarios($tabla, $item, $valor);
+
+                if ($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
+
+                    if($respuesta["estado"]== 1 ){
+         
+                            $_SESSION["iniciarSesion"] = "ok";
+                            $_SESSION["id"] = $respuesta["id"];
+                            $_SESSION["nombre"] = $respuesta["nombre"];
+                            $_SESSION["usuario"] = $respuesta["usuario"];
+                            $_SESSION["foto"] = $respuesta["foto"];
+                            $_SESSION["perfil"] = $respuesta["perfil"];
+
+
+                        echo '<script>
+                            window.location = "inicio";
+                            </script>';
+
+                    }else{
+
+
+                        echo '<br>
+                                <div class="alert alert-danger" >El usuario aún no está activado</div>';
+
+                    }
                 
-                if(is_array($respuesta) && 
-                   $respuesta["usuario"] == $_POST["ingUsuario"] && 
-                   $respuesta["password"] == $encriptar) {
-
-                    $_SESSION["iniciarSesion"] = "ok";
-                    $_SESSION["id"] = $respuesta["id"];
-                    $_SESSION["nombre"] = $respuesta["nombre"];
-                    $_SESSION["usuario"] = $respuesta["usuario"];
-                    $_SESSION["foto"] = $respuesta["foto"];
-                    $_SESSION["perfil"] = $respuesta["perfil"];
-
-
-                    echo '<script>
-                        window.location = "inicio";
-                    </script>';
                     
                 } else {
                     echo '<script>
