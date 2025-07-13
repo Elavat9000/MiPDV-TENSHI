@@ -135,6 +135,54 @@ $(".btnActivar").click(function(){
         $(this).attr('estadoUsuario', 0);
 
     }
-    
+
+})
+
+/*===================================================
+*****************REVISAR USUARIO REPETIR*************** 
+==================================================*/
+
+$("#nuevoUsuario").change(function(){
+
+    //$(".alert").remove();
+
+    var usuario = $(this).val();
+
+    var datos = new FormData();
+    datos.append("validarUsuario", usuario);
+
+    $.ajax({
+
+        url:"ajax/usuarios.ajax.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: function(respuesta){
+            
+
+            if(respuesta){
+                
+                    $// Insertar el mensaje
+                        let mensaje = $('<div class="alert alert-warning">Este usuario ya existe en la base de datos</div>');
+                        $("#nuevoUsuario").parent().after(mensaje);
+
+                        // Limpiar el input
+                        $("#nuevoUsuario").val("");
+
+                        // Desaparecer y eliminar el mensaje después de 10 segundos
+                        setTimeout(function(){
+                        mensaje.fadeOut("slow", function(){
+                            $(this).remove();
+                        });
+                        }, 4000);
+
+            
+            }
+        }
+
+    })
 
 })
